@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Fenwick tree
+permalink: /fenwick-tree
 ---
 
 {{ page.title }}

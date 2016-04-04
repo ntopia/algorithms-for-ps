@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Dinic's algorithm
+permalink: /dinic-flow
 ---
 
 {{ page.title }}
