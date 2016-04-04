@@ -160,7 +160,8 @@ ul.posts {
     background-color: #eef;
     font-family: Consolas;
     font-size: 85%;
-    padding: 0 .2em;
+    padding: 0.2em;
+    line-height: 1.0em;
   }
 
     #post pre code {
