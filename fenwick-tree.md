@@ -27,7 +27,7 @@ prefix value를 빠르게 구할 때 쓸 수 있는 트리 자료구조이다. �
 ----
 
 {% highlight cpp %}
-int tree[SIZE];
+int tree[TREE_SIZE];
 
 // Returns the sum from index 1 to pos
 int query(int pos) {
@@ -41,15 +41,15 @@ int query(int pos) {
 
 // Adds val to element with index pos
 void add(int pos, int val) {
-  while (i < SIZE) {
-    tree[i] += k;
-    i += i & -i;
+  while (pos < TREE_SIZE) {
+    tree[pos] += val;
+    pos += pos & -pos;
   }
 }
 {% endhighlight %}
 
 
-대표적인 문제
--------------
+테스트 문제
+-----------
 
 coming soon..
