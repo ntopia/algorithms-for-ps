@@ -12,7 +12,7 @@ DFT를 O(nlogn) 에 구하는 방법이 바로 Fast Fourier Transform 이다.
 
 설명이 조금 더 필요함.
 
-이 글의 내용은 대부분 http://e-maxx.ru/algo/fft_multiply 에서 가져왔다.
+이 글의 내용은 대부분 [이 곳](http://e-maxx.ru/algo/fft_multiply) 에서 가져왔다.
 
 구현
 ----
