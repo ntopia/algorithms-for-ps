@@ -19,7 +19,7 @@ DFT를 O(nlogn) 에 구하는 방법이 바로 Fast Fourier Transform 이다.
 
 기본적인 구현
 
-```c++
+{% highlight cpp %}
 typedef complex<double> base;
  
 void fft (vector<base> & a, bool invert) {
@@ -44,11 +44,11 @@ void fft (vector<base> & a, bool invert) {
     w *= wn;
   }
 }
-```
+{% endhighlight %}
 
 이를 이용해 두 다항식을 곱하는 함수를 예제로 만들어보면 다음과 같다.
 
-```c++
+{% highlight cpp %}
 void multiply (const vector<int> & a, const vector<int> & b, vector<int> & res) {
   vector<base> fa (a.begin(), a.end()),  fb (b.begin(), b.end());
   size_t n = 1;
@@ -65,11 +65,11 @@ void multiply (const vector<int> & a, const vector<int> & b, vector<int> & res) 
   for (size_t i=0; i<n; ++i)
     res[i] = int (fa[i].real() + 0.5);
 }
-```
+{% endhighlight %}
 
 적당히 최적화한 버전
 
-```c++
+{% highlight cpp %}
 typedef complex<double> base;
  
 void fft (vector<base> & a, bool invert) {
@@ -101,5 +101,5 @@ void fft (vector<base> & a, bool invert) {
     for (int i=0; i<n; ++i)
       a[i] /= n;
 }
-```
+{% endhighlight %}
 
