@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Dinic's algorithm
-permalink: /dinic-flow
+category: Graph
+subcategory: Maximum Flow
+permalink: /graph/maximum-flow/dinic-flow
 ---
 
 {{ page.title }}

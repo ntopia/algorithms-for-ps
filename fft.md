@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Fast Fourier Transform
-permalink: /fft
+category: Math
+permalink: /math/fft
 ---
 
 {{ page.title }}

@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Fenwick tree
-permalink: /fenwick-tree
+category: Data Structure
+permalink: /data-structure/fenwick-tree
 ---
 
 {{ page.title }}

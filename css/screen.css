@@ -38,16 +38,12 @@ p {
   margin: 1em 0;
 }
 
-a {
+a, a:visited {
   color: #00a;
 }
 
 a:hover {
   color: black;
-}
-
-a:visited {
-  color: #a0a;
 }
 
 table {
@@ -62,7 +58,6 @@ table {
 /*****************************************************************************/
 
 ul.pages {
-  list-style-type: none;
   margin-bottom: 2em;
 }
 
@@ -75,6 +70,12 @@ ul.pages {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
+
+ul.pages > li,
+ul.pages > li > ul > li,
+ul.pages > li > ul > li > ul > li {
+  margin-left: 20px;
+}
 
 /*****************************************************************************/
 /*

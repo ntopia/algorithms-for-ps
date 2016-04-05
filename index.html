@@ -6,10 +6,47 @@ title: algorithms for ps
 <div id="home">
   <h1>Pages</h1>
   <ul class="pages">
+    {% assign categories = site.emptyArray %}
+
     {% for page in site.pages %}
-      {% if page.url != '/' %}
+      {% if page.category %}
+        {% assign categories = categories | push: page.category %}
+      {% elsif page.url != '/' %}
         <li><a href="{{ page.url | prepend: site.github.url }}">{{ page.title }}</a></li>
+      {% else %}
       {% endif %}
+    {% endfor %}
+    {% assign categories = categories | uniq | sort %}
+
+    {% for category in categories %}
+      <li>{{ category }}
+        <ul>
+          {% assign subcategories = site.emptyArray %}
+
+          {% for page in site.pages %}
+            {% if page.category == category %}
+              {% if page.subcategory %}
+                {% assign subcategories = subcategories | push: page.subcategory %}
+              {% else %}
+                <li><a href="{{ page.url | prepend: site.github.url }}">{{ page.title }}</a></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% assign subcategories = subcategories | uniq | sort %}
+
+          {% for subcategory in subcategories %}
+            <li>{{ subcategory }}
+              <ul>
+                {% for page in site.pages %}
+                  {% if page.category == category and page.subcategory == subcategory %}
+                    <li><a href="{{ page.url | prepend: site.github.url }}">{{ page.title }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
     {% endfor %}
   </ul>
 </div>
