@@ -11,7 +11,7 @@ title: algorithms for ps
     {% for page in site.pages %}
       {% if page.category %}
         {% assign categories = categories | push: page.category %}
-      {% elsif page.url != '/' %}
+      {% elsif page.url != '/' and page.url != '/about' %}
         <li><a href="{{ page.url | prepend: site.github.url }}">{{ page.title }}</a></li>
       {% else %}
       {% endif %}
