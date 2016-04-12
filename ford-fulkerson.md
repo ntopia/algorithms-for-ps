@@ -3,7 +3,7 @@ layout: page
 title: Ford-Fulkerson algorithm
 category: Graph
 subcategory: Maximum Flow
-permalink: /math/ford-fulkerson
+permalink: /graph/maximum-flow/ford-fulkerson
 use_math: true
 ---
 
