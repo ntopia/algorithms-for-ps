@@ -15,14 +15,13 @@ use_math: true
 maximum flow를 구하는 가장 기본적인 알고리즘. 증가경로를 찾을 때 dfs를 이용한다.
 
 증가경로를 찾을 때 bfs를 사용할 수도 있는데, 이러면 증가경로 중 거리가 가장 짧은
-것을 찾게 된다. 이런 것을 특별히 [Edmonds-Karp algorithm](https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm)
-이라 하고, 시간복잡도가 $ O(V^{2}E) $ 가 된다. 두 알고리즘은 분명 다르지만
-여기서는 그냥 한 문서에서 다 다루고 있다.
+것을 찾게 된다. 이런 방법을 특별히 [Edmonds-Karp algorithm](https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm)
+이라 부르고, 시간복잡도는 $ O(V^{2}E) $ 가 되어 maximum flow값과 상관없어지게 된다.
+두 알고리즘은 분명 다르지만 여기서는 그냥 한 문서에서 다 다루고 있다.
 
-일반적으로는 bfs가 좀 더 나은 성능을 보여준다. 하지만 정점, 간선은 엄청 많은데
-소스와 싱크 사이의 거리가 대단히 짧은 경우엔 (예: 이분매칭) dfs를 사용하는 것이
-좀 더 효율적이다.
-
+평균적으로는 bfs가 더 나은 성능을 보여준다. 하지만 정점, 간선은 엄청 많은데
+maximum flow 값의 상한은 작고, 소스와 싱크 사이의 거리가 대단히 짧은 경우에는
+(예: 이분매칭) dfs를 사용하는 것이 좀 더 효율적이다.
 
 
 정보
