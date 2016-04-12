@@ -162,7 +162,7 @@ ul.pages > li > ul > li > ul > li {
   #page code {
     border: 1px solid #ddd;
     background-color: #eef;
-    font-family: Consolas;
+    font-family: Consolas, 'Courier New';
     font-size: 85%;
     padding: 0.2em;
     line-height: 1.0em;
