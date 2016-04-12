@@ -69,3 +69,9 @@ bool isPrime(ll n) {
   return true;
 }
 {% endhighlight %}
+
+
+관련글
+------
+
+* [Primality Testing : Non-deterministic Algorithms](https://www.topcoder.com/community/data-science/data-science-tutorials/primality-testing-non-deterministic-algorithms/)
